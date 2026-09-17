@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ZombieParty.Models.Data;
 
@@ -11,9 +12,11 @@ using ZombieParty.Models.Data;
 namespace ZombieParty.Migrations
 {
     [DbContext(typeof(ZombiePartyDbContext))]
-    partial class ZombiePartyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260917164225_SeedZombieZombieTypeWeapon")]
+    partial class SeedZombieZombieTypeWeapon
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -122,18 +125,6 @@ namespace ZombieParty.Migrations
                             Name = "Master Shield",
                             Price = 500m,
                             Qty = 30,
-                            QtyBought = 1
-                        },
-                        new
-                        {
-                            WeaponId = 3,
-                            CreatedDate = new DateTime(1999, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "A heavy Sniper",
-                            Force = 270m,
-                            Image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2-ipv694ofDyL1YDux_ddPTRNUhseqn6H37EP43UjrQoFr6Pw7aGxYa4&s=10",
-                            Name = "Baher-23",
-                            Price = 550m,
-                            Qty = 10,
                             QtyBought = 1
                         });
                 });
